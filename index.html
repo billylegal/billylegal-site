@@ -118,4 +118,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </main>
 <footer><div class="wrap"><span>&copy; 2026 Billy Legal. Trust No One Music. All rights reserved.</span><span>billylegal.com</span></div></footer>
 <script src="assets/radio.js" defer></script>
+<style>
+.bh{position:fixed;inset:0;pointer-events:none;z-index:40;overflow:hidden}
+.bhx{position:absolute;left:0;top:0;animation:bhx 19s linear infinite alternate}
+.bhy{display:block;width:62px;height:auto;animation:bhy 13s linear infinite alternate;filter:drop-shadow(0 4px 10px rgba(0,0,0,.55))}
+@keyframes bhx{from{transform:translateX(0)}to{transform:translateX(calc(100vw - 62px))}}
+@keyframes bhy{from{transform:translateY(0)}to{transform:translateY(calc(100vh - 88px))}}
+@media (prefers-reduced-motion:reduce){.bhx,.bhy{animation:none}}
+</style>
+<div class="bh" aria-hidden="true"><div class="bhx"><img class="bhy" src="assets/head.png" alt="" width="62" height="87"></div></div>
 </body></html>
