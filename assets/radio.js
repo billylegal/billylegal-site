@@ -56,14 +56,4 @@
   });
   $('rnext').addEventListener('click', function () { if (!started) start(); else next(); });
   $('rprev').addEventListener('click', function () { if (!started) start(); else prev(); });
-  var vid = $('rvid'), big = true;
-  try { if (localStorage.getItem('bl-radio-video') === 'small') big = false; } catch (e) {}
-  function paintVid() { panel.classList.toggle('mini', !big); vid.setAttribute('aria-pressed', big ? 'true' : 'false'); vid.title = big ? 'Shrink the video (music keeps playing)' : 'Enlarge the video'; }
-  vid.addEventListener('click', function () { big = !big; try { localStorage.setItem('bl-radio-video', big ? 'big' : 'small'); } catch (e) {} paintVid(); });
-  paintVid();
-  $('rclose').addEventListener('click', function () {
-    if (player && player.destroy) { player.destroy(); player = null; }
-    $('rplayer-wrap').innerHTML = '<div id="rplayer"></div>';
-    started = false; playing = false; panel.hidden = true; box.classList.remove('open'); setIcon(); setTitle('PRESS PLAY');
-  });
 })();
