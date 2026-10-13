@@ -138,6 +138,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 @keyframes shx{from{transform:translateX(0)}to{transform:translateX(calc(100vw - 96px))}}
 @keyframes shy{from{transform:translateY(0)}to{transform:translateY(calc(100vh - 70px))}}
 @media(prefers-reduced-motion:reduce){.shx,.shy{animation:none}}
+.un{position:fixed;inset:0;pointer-events:none;z-index:40;overflow:hidden}
+.ux{position:absolute;left:0;top:0;animation:ux 23s linear infinite alternate;animation-delay:-5s}
+.uy{display:block;width:78px;pointer-events:auto;cursor:pointer;animation:uy 17s linear infinite alternate;animation-delay:-3s;filter:drop-shadow(0 4px 10px rgba(0,0,0,.55))}
+.uy img{display:block;width:100%;height:auto}
+@keyframes ux{from{transform:translateX(0)}to{transform:translateX(calc(100vw - 78px))}}
+@keyframes uy{from{transform:translateY(0)}to{transform:translateY(calc(100vh - 78px))}}
+@media(max-width:600px){.uy{width:60px}@keyframes ux{from{transform:translateX(0)}to{transform:translateX(calc(100vw - 60px))}}@keyframes uy{from{transform:translateY(0)}to{transform:translateY(calc(100vh - 60px))}}}
+@media(prefers-reduced-motion:reduce){.ux,.uy{animation:none}}
 </style>
 <div class="sh"><div class="shx"><a class="shy" href="https://omarchystore.com" target="_blank" rel="noopener" title="Omarchy Store" aria-label="Omarchy Store"><img src="assets/omarchy-store.png" alt="" width="96" height="69"></a></div></div>
+<div class="un"><div class="ux"><a class="uy" href="https://1upradio.com" target="_blank" rel="noopener" title="1UP Radio - keep the volume up" aria-label="1UP Radio"><img src="assets/1up-sticker.png" alt="" width="78" height="78"></a></div></div>
 </body></html>
